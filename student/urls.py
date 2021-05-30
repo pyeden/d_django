@@ -1,9 +1,9 @@
 from django.urls import path
 
-from student.views import index
+from student.views import IndexView
 
 app_name = 'student'
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('', IndexView.as_view(), name='index'),
 ]
