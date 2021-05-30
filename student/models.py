@@ -26,6 +26,10 @@ class Student(models.Model):
     create_t = models.DateTimeField('创建时间', auto_now_add=True)
     update_t = models.DateTimeField('更新时间', auto_now=True)
 
+    @classmethod
+    def get_all(cls):
+        return cls.objects.all()
+
     def __str__(self):
         return f'student: {self.name}'
 
